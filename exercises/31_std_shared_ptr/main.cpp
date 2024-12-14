@@ -10,7 +10,7 @@ int main(int argc, char **argv) {
     std::shared_ptr<int> ptrs[]{shared, shared, shared};
 
     std::weak_ptr<int> observer = shared;
-    ASSERT(observer.use_count() == ?, "");
+    ASSERT(observer.use_count() == 1, "");
 
     ptrs[0].reset();
     ASSERT(observer.use_count() == ?, "");
